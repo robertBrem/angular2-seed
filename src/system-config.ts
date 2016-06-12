@@ -2,30 +2,84 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-const map: any = {
+const map:any = {
   '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
-const packages: any = {
+const packages:any = {
+  '@angular2-material/core': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'core.js'
+  },
+  '@angular2-material/sidenav': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'sidenav.js'
+  },
+  '@angular2-material/toolbar': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'toolbar.js'
+  },
+  '@angular2-material/card': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'card.js'
+  },
+  '@angular2-material/button': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'button.js'
+  },
+  '@angular2-material/checkbox': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'checkbox.js'
+  },
+  '@angular2-material/radio': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'radio.js'
+  },
+  '@angular2-material/progress-circle': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'progress-circle.js'
+  },
+  '@angular2-material/progress-bar': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'progress-bar.js'
+  },
+  '@angular2-material/input': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'input.js'
+  },
+  '@angular2-material/list': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'list.js'
+  },
+  '@angular2-material/icon': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'icon.js'
+  },
+  '@angular2-material/tabs': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'tabs.js'
+  },
 };
-
-// put the names of any of your Material components here
-const materialPkgs:string[] = [
-  'core',
-  'button',
-  'card',
-];
-
-materialPkgs.forEach((pkg) => {
-  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
-});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
  **********************************************************************************************/
-const barrels: string[] = [
+const barrels:string[] = [
   // Angular specific barrels.
   '@angular/core',
   '@angular/common',
@@ -44,13 +98,13 @@ const barrels: string[] = [
   /** @cli-barrel */
 ];
 
-const cliSystemConfigPackages: any = {};
-barrels.forEach((barrelName: string) => {
-  cliSystemConfigPackages[barrelName] = { main: 'index' };
+const cliSystemConfigPackages:any = {};
+barrels.forEach((barrelName:string) => {
+  cliSystemConfigPackages[barrelName] = {main: 'index'};
 });
 
 /** Type declaration for ambient System. */
-declare var System: any;
+declare var System:any;
 
 // Apply the CLI SystemJS configuration.
 System.config({
@@ -63,4 +117,4 @@ System.config({
 });
 
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({map, packages});

@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  {{ title }}
+</md-toolbar>
+<div class="talk-container">
+  <md-card *ngFor="let talk of talks">
+    <md-card-title>{{talk.title}}</md-card-title>
+    <md-card-content class="primary">{{talk.speakers}}</md-card-content>
+  </md-card>
+</div>

@@ -1,0 +1,10 @@
+md-card {
+  width: 200px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.talk-container {
+  display: flex;
+  flex-flow: wrap;
+}
