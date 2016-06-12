@@ -34,6 +34,16 @@ import {MD_BUTTON_DIRECTIVES} from "@angular2-material/button";
   providers: [MdRadioDispatcher, MdIconRegistry]
 })
 export class DevoxxAdessoAppComponent {
+  /* Open when someone clicks on the span element */
+  public openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  public closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
   title:string = 'Devoxx UK';
   talks:Object[] = [
     {title: "Dot Con", speakers: "James Veitch", image: "dotCon.png"},
