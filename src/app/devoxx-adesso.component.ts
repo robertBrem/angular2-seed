@@ -35,8 +35,9 @@ import {MD_BUTTON_DIRECTIVES} from "@angular2-material/button";
 })
 export class DevoxxAdessoAppComponent {
   /* Open when someone clicks on the span element */
-  public openNav() {
+  public openNav(currentTalk:string) {
     document.getElementById("myNav").style.width = "100%";
+    this.currentTalk = currentTalk;
   }
 
   /* Close when someone clicks on the "x" symbol inside the overlay */
@@ -45,6 +46,7 @@ export class DevoxxAdessoAppComponent {
   }
 
   title:string = 'Devoxx UK';
+  currentTalk:string = "BIGdotCon.png";
   talks:Object[] = [
     {title: "Dot Con", speakers: "James Veitch", image: "dotCon.png"},
     {
@@ -146,7 +148,7 @@ export class DevoxxAdessoAppComponent {
     }
     ,
     {
-      title: "Scaling Engineering by Hacking Conway's Law", speakers: "Aviran Mordo", image: "scalingEngineering.png"
+      title: "Scaling Engineering by Hacking Conway's Law", speakers: "Aviran Mordo", image: "hackingConwaysLaw.png"
     }
     ,
     {
@@ -161,7 +163,41 @@ export class DevoxxAdessoAppComponent {
       title: "Docker and Kubernetes Recipes for Java Developers",
       speakers: "Arun Gupta",
       image: "dockerAndKubernetes Recipes.png"
-    }
-  ]
-    ;
+    },
+    {title: "Progressive apps in the Real World", speakers: "Dean Hume", image: "progressiveAppsInTheRealWorld.png"},
+    {title: "The Art of Angular in 2016", speakers: "Matt Raible", image: "theArtOfAngular.png"},
+    {
+      title: "From object oriented to functional domain modeling",
+      speakers: "Mario Fusco",
+      image: "fromObjectOrientedToFunctional.png"
+    },
+    {title: "What the Cult of Expertise Costs", speakers: "Jessica Rose", image: "whatTheCultOfExpertiseCosts.png"},
+    {title: "Maven - Taming the Beast", speakers: "Roberto Cortez", image: "mavenTamingTheBeast.png"},
+    {
+      title: "Offline-first apps with Web Components",
+      speakers: "AMahdy AbdElAziz",
+      image: "offlineFirstAppsWithWebComponents.png"
+    },
+    {
+      title: "Microsoft and Open Source? Microsoft and Java? Really?",
+      speakers: "Giles Davies",
+      image: "microsoftAndOpenSource.png"
+    },
+    {
+      title: "Harnessing Domain Driven Design for Distributed Systems",
+      speakers: "Andrew Harmel-Law, Gayathri Thiyagarajan",
+      image: "harnessingDomainDrivenDesign.png"
+    },
+    {
+      title: "SQL for JSON: Querying with Performance for NoSQL Databases and Applications",
+      speakers: "Arun Gupta",
+      image: "sqlForJson.png"
+    },
+    {
+      title: "10 Building Blocks for Enterprise JavaScript Applications",
+      speakers: "Geertjan Wielenga",
+      image: "10buildingBlocks.png"
+    },
+    {title: "MVC 1.0 - by Example", speakers: "Ivar Grimstad", image: "mvcByExample.png"}
+  ];
 }

@@ -9,7 +9,7 @@
   </button>
 
   <div class="overlay-content">
-    <img src="../images/{{currentTalk}}/overview.png"/>
+    <img src="../images/{{currentTalk}}"/>
   </div>
 
 </div>
@@ -19,7 +19,7 @@
     <md-card-title>{{talk.title}}</md-card-title>
     <md-card-content>{{talk.speakers}}</md-card-content>
     <md-card-actions align="end">
-      <button md-icon-button (click)="openNav()">
+      <button md-icon-button (click)="openNav('BIG' + talk.image)">
         <md-icon>slideshow</md-icon>
       </button>
       <button md-icon-button *ngIf="talk.nerd">
