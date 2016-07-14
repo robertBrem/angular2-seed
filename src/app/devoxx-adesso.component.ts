@@ -80,7 +80,8 @@ export class DevoxxAdessoAppComponent {
       title: "Kubernetes in production - blue-green deployment, auto scaling and deployment automation",
       speakers: "Paul Bakker",
       image: "kubernetesInProduction",
-      video: "https://www.youtube.com/watch?v=-Ci4vd4rh4M"
+      video: "https://www.youtube.com/watch?v=-Ci4vd4rh4M",
+      nerd: true
     },
     {
       title: "The Silver Bullet Syndrome",
@@ -114,7 +115,8 @@ export class DevoxxAdessoAppComponent {
       title: "Building Cognitive Applications with Watson",
       speakers: "Jonathan Kaufman",
       image: "watson",
-      video: "https://www.youtube.com/watch?v=PwG8aTjOo94"
+      video: "https://www.youtube.com/watch?v=PwG8aTjOo94",
+      fav: true
     }
     ,
     {
